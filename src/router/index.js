@@ -24,7 +24,13 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+<<<<<<< HEAD
   routes,
+=======
+  routes: [
+    {path: '*', component: NotFoundComponent}
+  ]
+>>>>>>> parent of 8d6be02 (fix to 404 page)
 })
 
 export default router
