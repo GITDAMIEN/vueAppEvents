@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '../views/EventList.vue'
 import EventDetails from '../views/EventDetails.vue'
+import NotFoundComponent from '../views/NotFoundComponent.vue'
 import About from '../views/About.vue'
 
 const routes = [
@@ -24,7 +25,9 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
+  routes: [
+    {path: '*', component: NotFoundComponent}
+  ]
 })
 
 export default router
